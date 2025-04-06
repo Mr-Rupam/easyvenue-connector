@@ -4,9 +4,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import FeaturesSection from "@/components/FeaturesSection";
 import PopularSpaces from "@/components/PopularSpaces";
-import CustomerSays from "@/components/CustomerSays";
 import CTASection from "@/components/CTASection";
-import PricePlan from "@/components/Price";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -16,9 +14,7 @@ const Index = () => {
       <Hero />
       <FeaturesSection />
       <PopularSpaces />
-      <CustomerSays />
       <CTASection />
-      <PricePlan />
       <Footer />
     </div>
   );
