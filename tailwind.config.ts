@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				bookeasy: {
+					teal: '#2A9D8F',
+					orange: '#E76F51',
+					yellow: '#E9C46A',
+					navy: '#264653',
+					lightgray: '#F5F5F5',
 				}
 			},
 			borderRadius: {
