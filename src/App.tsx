@@ -10,6 +10,7 @@ import Signup from "./pages/Signup";
 import ForgotPassword from "./pages/ForgotPassword";
 import NotFound from "./pages/NotFound";
 import Customer from "./pages/Customer";
+import AdminDashboard from "./pages/AdminDashboard";
 import PrivateRoute from "./components/privateRoute";
 
 const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/about" element={<NotFound />} />
           <Route path="/business" element={<NotFound />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/admin" element={<AdminDashboard />} />
           <Route
             path="/customer"
             element={
