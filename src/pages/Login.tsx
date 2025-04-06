@@ -6,6 +6,9 @@ import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Eye, EyeOff } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { doc, getDoc } from "firebase/firestore";
+import { auth,db } from "../firebase"
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -16,33 +19,58 @@ const Login = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-
-    if (email && password) {
-      localStorage.setItem("isLoggedIn", "true");
-      localStorage.setItem("userRole", role); // 🆕 Store role if needed
-
-      toast({
-        title: "Login successful",
-        description: `Welcome back, ${role === "admin" ? "Admin" : "User"}!`,
-      });
-
-      // 🧭 Redirect based on role
-      if (role === "admin") {
-        navigate("/admin");
-      } else {
-        navigate("/customer");
-      }
-    } else {
+  
+    if (!email || !password) {
       toast({
         variant: "destructive",
         title: "Login failed",
         description: "Please enter your email and password.",
       });
+      return;
+    }
+  
+    try {
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+  
+      let role: "admin" | "customer" | null = null;
+  
+      // 🔍 Check if user is in 'admin' collection
+      const adminDoc = await getDoc(doc(db, "admin", user.uid));
+      if (adminDoc.exists()) {
+        role = "admin";
+      } else {
+        // 🔍 Check if user is in 'customer' collection
+        const customerDoc = await getDoc(doc(db, "customer", user.uid));
+        if (customerDoc.exists()) {
+          role = "customer";
+        }
+      }
+  
+      if (!role) {
+        throw new Error("User role not found in Firestore.");
+      }
+  
+      localStorage.setItem("isLoggedIn", "true");
+      localStorage.setItem("userRole", role);
+      localStorage.setItem("userEmail", user.email || "");
+  
+      toast({
+        title: "Login successful",
+        description: `Welcome back, ${role === "admin" ? "Admin" : "User"}!`,
+      });
+  
+      navigate(role === "admin" ? "/admin" : "/customer");
+    } catch (error: any) {
+      toast({
+        variant: "destructive",
+        title: "Login failed",
+        description: error.message,
+      });
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-bookeasy-lightgray flex flex-col">
       <div className="container py-8">
