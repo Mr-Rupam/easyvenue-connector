@@ -9,6 +9,8 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import ForgotPassword from "./pages/ForgotPassword";
 import NotFound from "./pages/NotFound";
+import Customer from "./pages/Customer";
+import PrivateRoute from "./components/privateRoute";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +31,14 @@ const App = () => (
           <Route path="/about" element={<NotFound />} />
           <Route path="/business" element={<NotFound />} />
           <Route path="*" element={<NotFound />} />
+          <Route
+            path="/customer"
+            element={
+              <PrivateRoute>
+                <Customer />
+              </PrivateRoute>
+            }
+          />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
