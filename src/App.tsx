@@ -12,6 +12,7 @@ import NotFound from "./pages/NotFound";
 import Customer from "./pages/Customer";
 import AdminDashboard from "./pages/AdminDashboard";
 import PrivateRoute from "./components/privateRoute";
+import MyBookings from "./pages/MyBookings";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/spaces/:id" element={<NotFound />} />
           <Route path="/about" element={<NotFound />} />
           <Route path="/business" element={<NotFound />} />
+          <Route path="/my-bookings" element={<MyBookings />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/admin" element={<AdminDashboard />} />
           <Route
