@@ -1,15 +1,21 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const location = useLocation();
   
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  // Don't show the navbar on auth pages
+  if (location.pathname === "/login" || location.pathname === "/signup" || location.pathname === "/forgot-password") {
+    return null;
+  }
 
   return (
     <nav className="w-full py-4 bg-white shadow-sm">
@@ -35,11 +41,15 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="flex items-center space-x-4">
-            <Button variant="outline" className="border-bookeasy-teal text-bookeasy-teal hover:bg-bookeasy-teal hover:text-white">
-              Log In
+            <Button 
+              variant="outline" 
+              className="border-bookeasy-teal text-bookeasy-teal hover:bg-bookeasy-teal hover:text-white"
+              asChild
+            >
+              <Link to="/login">Log In</Link>
             </Button>
-            <Button className="bg-bookeasy-teal hover:bg-bookeasy-teal/90">
-              Sign Up
+            <Button className="bg-bookeasy-teal hover:bg-bookeasy-teal/90" asChild>
+              <Link to="/signup">Sign Up</Link>
             </Button>
           </div>
         </div>
@@ -90,11 +100,20 @@ const Navbar = () => {
               For Businesses
             </Link>
             <div className="flex flex-col space-y-2 pt-2 border-t">
-              <Button variant="outline" className="border-bookeasy-teal text-bookeasy-teal hover:bg-bookeasy-teal hover:text-white w-full">
-                Log In
+              <Button 
+                variant="outline" 
+                className="border-bookeasy-teal text-bookeasy-teal hover:bg-bookeasy-teal hover:text-white w-full"
+                asChild
+                onClick={toggleMenu}
+              >
+                <Link to="/login">Log In</Link>
               </Button>
-              <Button className="bg-bookeasy-teal hover:bg-bookeasy-teal/90 w-full">
-                Sign Up
+              <Button 
+                className="bg-bookeasy-teal hover:bg-bookeasy-teal/90 w-full" 
+                asChild
+                onClick={toggleMenu}
+              >
+                <Link to="/signup">Sign Up</Link>
               </Button>
             </div>
           </div>
