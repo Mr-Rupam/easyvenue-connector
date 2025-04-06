@@ -67,7 +67,7 @@ const ForgotPassword = () => {
                   />
                 </div>
 
-                <Button type="submit" className="w-full bg-bookeasy-teal hover:bg-bookeasy-teal/90">
+                <Button type="submit" className="w-full bg-[#1E0D73] hover:bg-[#1E0D73]/90">
                   Send Reset Link
                 </Button>
               </form>
@@ -89,7 +89,7 @@ const ForgotPassword = () => {
             <div className="mt-6 text-center">
               <Link 
                 to="/login" 
-                className="text-bookeasy-teal hover:underline inline-flex items-center"
+                className="text-[#1E0D73] hover:underline inline-flex items-center"
               >
                 <ArrowLeft size={16} className="mr-2" />
                 Back to sign in

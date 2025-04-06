@@ -27,28 +27,28 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
           <div className="flex space-x-6">
-            <Link to="/" className="text-bookeasy-navy hover:text-bookeasy-teal transition-colors">
+            <Link to="/" className="text-bookeasy-navy hover:text-[#1E0D73] transition-colors">
               Home
             </Link>
-            <Link to="/spaces" className="text-bookeasy-navy hover:text-bookeasy-teal transition-colors">
+            <Link to="/spaces" className="text-bookeasy-navy hover:text-[#1E0D73] transition-colors">
               Find Spaces
             </Link>
-            <Link to="/about" className="text-bookeasy-navy hover:text-bookeasy-teal transition-colors">
+            <Link to="/about" className="text-bookeasy-navy hover:text-[#1E0D73] transition-colors">
               How It Works
             </Link>
-            <Link to="/business" className="text-bookeasy-navy hover:text-bookeasy-teal transition-colors">
+            <Link to="/business" className="text-bookeasy-navy hover:text-[#1E0D73] transition-colors">
               For Businesses
             </Link>
           </div>
           <div className="flex items-center space-x-4">
             <Button 
               variant="outline" 
-              className="border-bookeasy-teal text-bookeasy-teal hover:bg-bookeasy-teal hover:text-white"
+              className="border-[#1E0D73] text-[#1E0D73] hover:bg-[#1E0D73] hover:text-white"
               asChild
             >
               <Link to="/login">Log In</Link>
             </Button>
-            <Button className="bg-bookeasy-teal hover:bg-bookeasy-teal/90" asChild>
+            <Button className="bg-[#1E0D73] hover:bg-[#1E0D73]/90" asChild>
               <Link to="/signup">Sign Up</Link>
             </Button>
           </div>
@@ -73,28 +73,28 @@ const Navbar = () => {
           <div className="flex flex-col space-y-4">
             <Link 
               to="/" 
-              className="text-bookeasy-navy hover:text-bookeasy-teal transition-colors p-2"
+              className="text-bookeasy-navy hover:text-[#1E0D73] transition-colors p-2"
               onClick={toggleMenu}
             >
               Home
             </Link>
             <Link 
               to="/spaces" 
-              className="text-bookeasy-navy hover:text-bookeasy-teal transition-colors p-2"
+              className="text-bookeasy-navy hover:text-[#1E0D73] transition-colors p-2"
               onClick={toggleMenu}
             >
               Find Spaces
             </Link>
             <Link 
               to="/about" 
-              className="text-bookeasy-navy hover:text-bookeasy-teal transition-colors p-2"
+              className="text-bookeasy-navy hover:text-[#1E0D73] transition-colors p-2"
               onClick={toggleMenu}
             >
               How It Works
             </Link>
             <Link 
               to="/business" 
-              className="text-bookeasy-navy hover:text-bookeasy-teal transition-colors p-2"
+              className="text-bookeasy-navy hover:text-[#1E0D73] transition-colors p-2"
               onClick={toggleMenu}
             >
               For Businesses
@@ -102,14 +102,14 @@ const Navbar = () => {
             <div className="flex flex-col space-y-2 pt-2 border-t">
               <Button 
                 variant="outline" 
-                className="border-bookeasy-teal text-bookeasy-teal hover:bg-bookeasy-teal hover:text-white w-full"
+                className="border-[#1E0D73] text-[#1E0D73] hover:bg-[#1E0D73] hover:text-white w-full"
                 asChild
                 onClick={toggleMenu}
               >
                 <Link to="/login">Log In</Link>
               </Button>
               <Button 
-                className="bg-bookeasy-teal hover:bg-bookeasy-teal/90 w-full" 
+                className="bg-[#1E0D73] hover:bg-[#1E0D73]/90 w-full" 
                 asChild
                 onClick={toggleMenu}
               >

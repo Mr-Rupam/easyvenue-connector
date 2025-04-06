@@ -117,17 +117,17 @@ const Signup = () => {
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 >
                   I agree to the{" "}
-                  <Link to="/terms" className="text-bookeasy-teal hover:underline">
+                  <Link to="/terms" className="text-[#1E0D73] hover:underline">
                     Terms of Service
                   </Link>{" "}
                   and{" "}
-                  <Link to="/privacy" className="text-bookeasy-teal hover:underline">
+                  <Link to="/privacy" className="text-[#1E0D73] hover:underline">
                     Privacy Policy
                   </Link>
                 </label>
               </div>
 
-              <Button type="submit" className="w-full bg-bookeasy-teal hover:bg-bookeasy-teal/90">
+              <Button type="submit" className="w-full bg-[#1E0D73] hover:bg-[#1E0D73]/90">
                 Create Account
               </Button>
             </form>
@@ -135,7 +135,7 @@ const Signup = () => {
             <div className="mt-6 text-center">
               <p className="text-sm text-muted-foreground">
                 Already have an account?{" "}
-                <Link to="/login" className="text-bookeasy-teal hover:underline font-medium">
+                <Link to="/login" className="text-[#1E0D73] hover:underline font-medium">
                   Sign in
                 </Link>
               </p>

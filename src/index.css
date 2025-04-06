@@ -96,5 +96,5 @@
 }
 
 .text-gradient {
-  @apply bg-gradient-to-r from-bookeasy-teal to-bookeasy-orange bg-clip-text text-transparent;
+  @apply bg-gradient-to-r from-[#1E0D73] to-bookeasy-orange bg-clip-text text-transparent;
 }

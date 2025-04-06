@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 const CTASection = () => {
   return (
-    <section className="py-20 bg-bookeasy-teal">
+    <section className="py-20 bg-[#1E0D73]">
       <div className="container">
         <div className="max-w-3xl mx-auto text-center text-white">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -15,7 +15,7 @@ const CTASection = () => {
             already using our platform.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button className="bg-white text-bookeasy-teal hover:bg-bookeasy-yellow hover:text-bookeasy-navy border-2 border-white">
+            <Button className="bg-white text-[#1E0D73] hover:bg-bookeasy-yellow hover:text-bookeasy-navy border-2 border-white">
               List Your Space
             </Button>
             <Button variant="outline" className="text-white border-white hover:bg-white/10">

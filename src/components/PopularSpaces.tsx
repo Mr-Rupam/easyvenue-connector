@@ -62,7 +62,7 @@ const PopularSpaces = () => {
             <h2 className="text-3xl font-bold mb-2">Popular Spaces</h2>
             <p className="text-gray-600">Discover our most booked venues and spaces</p>
           </div>
-          <a href="/spaces" className="text-bookeasy-teal font-medium hover:underline">
+          <a href="/spaces" className="text-[#B7BDB7] font-medium hover:underline">
             View all spaces →
           </a>
         </div>
