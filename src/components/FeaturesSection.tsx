@@ -5,19 +5,19 @@ import { Search, Calendar, CheckCircle } from "lucide-react";
 const FeaturesSection = () => {
   const features = [
     {
-      icon: <Search className="w-10 h-10 text-bookeasy-teal" />,
+      icon: <Search className="w-10 h-10 text-[#1E0D73]" />,
       title: "Discover Spaces",
       description:
         "Browse hundreds of unique spaces from local businesses. Filter by location, capacity, amenities, and more.",
     },
     {
-      icon: <Calendar className="w-10 h-10 text-bookeasy-teal" />,
+      icon: <Calendar className="w-10 h-10 text-[#1E0D73]" />,
       title: "Book Instantly",
       description:
         "Reserve spaces with just a few clicks. Get instant confirmation and manage all your bookings in one place.",
     },
     {
-      icon: <CheckCircle className="w-10 h-10 text-bookeasy-teal" />,
+      icon: <CheckCircle className="w-10 h-10 text-[#1E0D73]" />,
       title: "Stress-Free Experience",
       description:
         "Enjoy clear pricing, flexible cancellations, and efficient customer support for a smooth booking experience.",

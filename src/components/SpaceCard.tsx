@@ -37,7 +37,7 @@ const SpaceCard: React.FC<SpaceProps> = ({
           alt={name}
           className="w-full h-full object-cover transition-transform hover:scale-105 duration-500"
         />
-        <div className="absolute top-3 left-3 bg-bookeasy-teal text-white text-xs font-medium px-2 py-1 rounded">
+        <div className="absolute top-3 left-3 bg-[#B7BDB7] text-white text-xs font-medium px-2 py-1 rounded">
           {type}
         </div>
       </div>

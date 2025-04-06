@@ -30,16 +30,16 @@ const Navbar2 = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
           <div className="flex space-x-6">
-            <Link to="/" className="text-bookeasy-navy hover:text-bookeasy-teal transition-colors">
+            <Link to="/" className="text-bookeasy-navy hover:text-[#1E0D73] transition-colors">
               Home
             </Link>
-            <Link to="/spaces" className="text-bookeasy-navy hover:text-bookeasy-teal transition-colors">
+            <Link to="/spaces" className="text-bookeasy-navy hover:text-[#1E0D73] transition-colors">
               Find Spaces
             </Link>
-            <Link to="/about" className="text-bookeasy-navy hover:text-bookeasy-teal transition-colors">
+            <Link to="/about" className="text-bookeasy-navy hover:text-[#1E0D73] transition-colors">
               How It Works
             </Link>
-            <Link to="/business" className="text-bookeasy-navy hover:text-bookeasy-teal transition-colors">
+            <Link to="/business" className="text-bookeasy-navy hover:text-[#1E0D73] transition-colors">
               For Businesses
             </Link>
           </div>
@@ -49,7 +49,7 @@ const Navbar2 = () => {
             <img
               src="/user-avatar.png" // replace with dynamic URL or default image
               alt="Profile"
-              className="w-10 h-10 rounded-full object-cover border border-gray-200 hover:ring-2 hover:ring-bookeasy-teal transition"
+              className="w-10 h-10 rounded-full object-cover border border-gray-200 hover:ring-2 hover:ring-[#1E0D73] transition"
             />
           </Link>
         </div>
@@ -73,28 +73,28 @@ const Navbar2 = () => {
           <div className="flex flex-col space-y-4">
             <Link
               to="/"
-              className="text-bookeasy-navy hover:text-bookeasy-teal transition-colors p-2"
+              className="text-bookeasy-navy hover:text-[#1E0D73] transition-colors p-2"
               onClick={toggleMenu}
             >
               Home
             </Link>
             <Link
               to="/spaces"
-              className="text-bookeasy-navy hover:text-bookeasy-teal transition-colors p-2"
+              className="text-bookeasy-navy hover:text-[#1E0D73] transition-colors p-2"
               onClick={toggleMenu}
             >
               Find Spaces
             </Link>
             <Link
               to="/about"
-              className="text-bookeasy-navy hover:text-bookeasy-teal transition-colors p-2"
+              className="text-bookeasy-navy hover:text-[#1E0D73] transition-colors p-2"
               onClick={toggleMenu}
             >
               How It Works
             </Link>
             <Link
               to="/business"
-              className="text-bookeasy-navy hover:text-bookeasy-teal transition-colors p-2"
+              className="text-bookeasy-navy hover:text-[#1E0D73] transition-colors p-2"
               onClick={toggleMenu}
             >
               For Businesses
